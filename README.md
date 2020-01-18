@@ -15,7 +15,9 @@ A galera no chat deu as seguintes dicas para aprender uma linguagem ou framework
 
 Objetivos a cumprir com o Nest.JS:
 
-- [ ] Hello Monkeys
+- [ ] Criar Novo Módulo
+- [ ] Novo Módulo Retorna Hello Monkeys em `/monkeys`
+- [ ] Fazer Teste (Unit + e2e) do Novo Módulo
 - [ ] Adicionar Nova Rota (Controller)
 - [ ] MVC
 - [ ] Teste Básico
@@ -28,3 +30,37 @@ Objetivos a cumprir com o Nest.JS:
 - [ ] Upload de Arquivos
 - [ ] Performance (Fastify)
 - [ ] Migrar o nosso BOT do Twitch para o Nest.JS
+
+## Sobre o Repositório
+
+## Instalação
+
+```bash
+$ npm install
+```
+
+## Rodar ☸️ o app
+
+```bash
+# modo desenvolvimento
+$ npm run start
+
+# modo "watch"
+$ npm run start:dev
+
+# modo produção
+$ npm run start:prod
+```
+
+## Testando
+
+```bash
+# testes unitários
+$ npm run test
+
+# tests e2e
+$ npm run test:e2e
+
+# verificar a cobertura de tests
+$ npm run test:cov
+```
