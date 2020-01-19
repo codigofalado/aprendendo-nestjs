@@ -17,8 +17,8 @@ Objetivos a cumprir com o Nest.JS:
 
 - [x] Criar Novo Módulo (tão simples quanto `$ nest g module monkeys`)
 - [x] Novo Módulo Retorna Hello Monkeys em `/monkeys`
-- [ ] Fazer Teste (Unit + e2e) do Novo Módulo
-- [ ] Adicionar Nova Rota (Controller)
+- [x] Fazer Teste (Unit + e2e) do Novo Módulo
+- [x] Adicionar Nova Rota (Controller)
 - [ ] MVC
 - [ ] Teste Básico
 - [ ] Hot Reload
