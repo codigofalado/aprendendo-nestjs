@@ -15,8 +15,8 @@ A galera no chat deu as seguintes dicas para aprender uma linguagem ou framework
 
 Objetivos a cumprir com o Nest.JS:
 
-- [ ] Criar Novo Módulo
-- [ ] Novo Módulo Retorna Hello Monkeys em `/monkeys`
+- [x] Criar Novo Módulo (tão simples quanto `$ nest g module monkeys`)
+- [x] Novo Módulo Retorna Hello Monkeys em `/monkeys`
 - [ ] Fazer Teste (Unit + e2e) do Novo Módulo
 - [ ] Adicionar Nova Rota (Controller)
 - [ ] MVC
