@@ -19,8 +19,7 @@ Objetivos a cumprir com o Nest.JS:
 - [x] Novo Módulo Retorna Hello Monkeys em `/monkeys`
 - [x] Fazer Teste (Unit + e2e) do Novo Módulo
 - [x] Adicionar Nova Rota (Controller)
-- [ ] MVC
-- [ ] Teste Básico
+- [x] MVC
 - [ ] Hot Reload
 - [ ] Banco de Dados - MySQL
 - [ ] Banco de Dados - Mongo

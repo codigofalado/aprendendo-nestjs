@@ -1,4 +1,4 @@
-import { Controller, Get, Query, Param } from "@nestjs/common";
+import { Controller, Get, Query, Param, Render } from "@nestjs/common";
 
 @Controller("monkeys")
 export class MonkeysController {
@@ -10,6 +10,23 @@ export class MonkeysController {
   @Get("code-monkey/:nome")
   meChamaDeCodeMonkey(@Param("nome") nome: string) {
     return `<h1>Você é Code Monkey, 🐵 ${nome}</h1>`;
+  }
+
+  // Retorna em Macacos o Número de Caracteres De :nome
+  @Get("count-monkeys/:nome")
+  @Render("count")
+  countMonkeys(@Param("nome") nome: string) {
+    // Pega o número de caracteres da var nome
+    const chars = nome.length;
+    // Loop pelo número de caracteres e incrementa um macado
+    let monkeys = "";
+    for (let i = 1; i <= chars; i++) monkeys += "🐵";
+
+    return {
+      nome,
+      chars,
+      monkeys
+    };
   }
 
   @Get("natal")
