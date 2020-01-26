@@ -42,4 +42,13 @@ describe("Monkeys Controller", () => {
       .mockReturnValueOnce(new Date("2019-12-20T11:01:58.135Z").getTime());
     expect(controller.checaNatal()).toBe("NÃO é Natal!!!");
   });
+
+  it("Should count my name and return monkeys", () => {
+    const expected = {
+      nome: "Fernando",
+      chars: 8,
+      monkeys: "🐵🐵🐵🐵🐵🐵🐵🐵"
+    };
+    expect(controller.countMonkeys("Fernando")).toEqual(expected);
+  });
 });
