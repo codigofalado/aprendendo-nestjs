@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Encontra Macados no MySQL</title>
+    <style>
+        h2 span {
+            color: #EB007D
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Estes são os meus Macacos:</h1>
+    <p>
+        {{#each macacos}}
+        {{id}}: {{name}} - {{description}} - {{emoji}} - <a href="#">Editar</a> - <a href="#">Deletar</a><br>
+        {{/each}}
+    </p>
+</body>
+
+</html>

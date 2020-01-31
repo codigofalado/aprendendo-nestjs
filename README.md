@@ -20,11 +20,14 @@ Objetivos a cumprir com o Nest.JS:
 - [x] Fazer Teste (Unit + e2e) do Novo Módulo
 - [x] Adicionar Nova Rota (Controller)
 - [x] MVC
-- [ ] Banco de Dados - MySQL
+- [x] Banco de Dados - MySQL
+- [ ] Testes Unitários Para o MySQL
+- [ ] Configuração (variáveis de ambiente)
 - [ ] Banco de Dados - Mongo
+- [ ] Testes Unitários Para o MongoDB
+- [ ] Crud Básico
 - [ ] Cache
 - [ ] Autenticação
-- [ ] Crud Básico
 - [ ] Upload de Arquivos
 - [ ] Migrar o nosso BOT do Twitch para o Nest.JS
 
