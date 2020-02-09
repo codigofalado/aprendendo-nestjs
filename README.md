@@ -21,7 +21,7 @@ Objetivos a cumprir com o Nest.JS:
 - [x] Adicionar Nova Rota (Controller)
 - [x] MVC
 - [x] Banco de Dados - MySQL
-- [ ] Testes Unitários Para o MySQL
+- [x] Testes Unitários Para o MySQL
 - [ ] Configuração (variáveis de ambiente)
 - [ ] Banco de Dados - Mongo
 - [ ] Testes Unitários Para o MongoDB
