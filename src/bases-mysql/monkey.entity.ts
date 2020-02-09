@@ -13,4 +13,7 @@ export class Monkey {
 
   @Column("tinytext")
   emoji: string;
+
+  @Column("bool")
+  status: boolean;
 }

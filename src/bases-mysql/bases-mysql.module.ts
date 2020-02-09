@@ -1,11 +1,11 @@
 import { Module } from "@nestjs/common";
 import { BasesMysqlController } from "./bases-mysql.controller";
-import { Monkey } from "./monkey.entity";
-import { TypeOrmModule } from "@nestjs/typeorm";
-import { BasesMysqlService } from './bases-mysql.service';
+import { TypeOrmModule, getRepositoryToken } from "@nestjs/typeorm";
+import { BasesMysqlService } from "./bases-mysql.service";
+import { MonkeyRepository } from "./monkey.repository";
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Monkey])],
+  imports: [TypeOrmModule.forFeature([MonkeyRepository])],
   controllers: [BasesMysqlController],
   providers: [BasesMysqlService]
 })

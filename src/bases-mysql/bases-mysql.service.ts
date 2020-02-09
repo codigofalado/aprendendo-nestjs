@@ -1,13 +1,13 @@
 import { Injectable } from "@nestjs/common";
-import { InjectRepository } from "@nestjs/typeorm";
 import { Monkey } from "./monkey.entity";
-import { Repository } from "typeorm";
+import { MonkeyRepository } from "./monkey.repository";
+import { InjectRepository } from "@nestjs/typeorm";
 
 @Injectable()
 export class BasesMysqlService {
   constructor(
     @InjectRepository(Monkey)
-    private readonly monkeyRepository: Repository<Monkey>
+    private readonly monkeyRepository: MonkeyRepository
   ) {}
   findAll(): Promise<Monkey[]> {
     return this.monkeyRepository.find();
