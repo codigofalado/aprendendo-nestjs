@@ -29,7 +29,6 @@ Objetivos a cumprir com o Nest.JS:
 - [ ] Cache
 - [ ] Autenticação
 - [ ] Upload de Arquivos
-- [ ] Migrar o nosso BOT do Twitch para o Nest.JS
 
 ## Sobre o Repositório
 
