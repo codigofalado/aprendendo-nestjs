@@ -22,7 +22,7 @@ Objetivos a cumprir com o Nest.JS:
 - [x] MVC
 - [x] Banco de Dados - MySQL
 - [x] Testes Unitários Para o MySQL
-- [ ] Configuração (variáveis de ambiente)
+- [x] Configuração (variáveis de ambiente)
 - [ ] Banco de Dados - Mongo
 - [ ] Testes Unitários Para o MongoDB
 - [ ] Crud Básico

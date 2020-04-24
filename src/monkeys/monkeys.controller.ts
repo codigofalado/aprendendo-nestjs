@@ -25,7 +25,7 @@ export class MonkeysController {
     return {
       nome,
       chars,
-      monkeys
+      monkeys,
     };
   }
 
