@@ -24,7 +24,7 @@ Objetivos a cumprir com o Nest.JS:
 - [x] Testes Unitários Para o MySQL
 - [x] Configuração (variáveis de ambiente)
 - [x] Banco de Dados - Mongo
-- [ ] Testes Unitários Para o MongoDB
+- [x] Testes Unitários Para o MongoDB
 - [ ] Crud Básico
 - [ ] Cache
 - [ ] Autenticação

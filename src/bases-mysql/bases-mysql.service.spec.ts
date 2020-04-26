@@ -11,17 +11,17 @@ describe("BasesMysqlService", () => {
       name: "teste",
       description: "Espionado",
       emoji: "",
-      status: false
+      status: false,
     },
     {
       id: 2,
       name: "teste 2",
       description: "Muito Fake, bicho",
       emoji: "",
-      status: true
-    }
+      status: true,
+    },
   ];
-  let service = { find: () => result, findOne: num => result[num] };
+  let service = { find: () => result, findOne: (num) => result[num] };
   let baseService: BasesMysqlService;
 
   beforeEach(async () => {
@@ -30,9 +30,9 @@ describe("BasesMysqlService", () => {
         BasesMysqlService,
         {
           provide: getRepositoryToken(Monkey),
-          useClass: MonkeyRepository
-        }
-      ]
+          useClass: MonkeyRepository,
+        },
+      ],
     })
       .overrideProvider(MonkeyRepository)
       .useValue(service)
