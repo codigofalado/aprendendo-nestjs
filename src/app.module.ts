@@ -3,10 +3,12 @@ import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { MonkeysModule } from "./monkeys/monkeys.module";
 import { Monkey } from "./bases-mysql/monkey.entity";
+import { Collection } from "./bases-mongodb/collection.entity";
 import { BasesMysqlModule } from "./bases-mysql/bases-mysql.module";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { Connection, DatabaseType } from "typeorm";
 import { ConfigModule } from "@nestjs/config";
+import { BasesMongodbModule } from "./bases-mongodb/bases-mongodb.module";
 
 @Module({
   imports: [
@@ -21,8 +23,17 @@ import { ConfigModule } from "@nestjs/config";
       entities: [Monkey],
       synchronize: true,
     }),
+    TypeOrmModule.forRoot({
+      name: "MongoDBConn",
+      type: "mongodb",
+      url: process.env.MONGODB_URL,
+      database: process.env.MONGODB_NAME,
+      entities: [Collection],
+      synchronize: true,
+    }),
     MonkeysModule,
     BasesMysqlModule,
+    BasesMongodbModule,
   ],
   controllers: [AppController],
   providers: [AppService],

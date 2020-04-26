@@ -7,6 +7,6 @@ import { MonkeyRepository } from "./monkey.repository";
 @Module({
   imports: [TypeOrmModule.forFeature([MonkeyRepository])],
   controllers: [BasesMysqlController],
-  providers: [BasesMysqlService]
+  providers: [BasesMysqlService],
 })
 export class BasesMysqlModule {}
