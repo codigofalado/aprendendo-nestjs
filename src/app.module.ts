@@ -9,6 +9,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { Connection, DatabaseType } from "typeorm";
 import { ConfigModule } from "@nestjs/config";
 import { BasesMongodbModule } from "./bases-mongodb/bases-mongodb.module";
+import { CrudModule } from './crud/crud.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { BasesMongodbModule } from "./bases-mongodb/bases-mongodb.module";
     MonkeysModule,
     BasesMysqlModule,
     BasesMongodbModule,
+    CrudModule,
   ],
   controllers: [AppController],
   providers: [AppService],
