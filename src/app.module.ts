@@ -4,12 +4,13 @@ import { AppService } from "./app.service";
 import { MonkeysModule } from "./monkeys/monkeys.module";
 import { Monkey } from "./bases-mysql/monkey.entity";
 import { Collection } from "./bases-mongodb/collection.entity";
+import { Food } from "./crud/food.entity";
 import { BasesMysqlModule } from "./bases-mysql/bases-mysql.module";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { Connection, DatabaseType } from "typeorm";
 import { ConfigModule } from "@nestjs/config";
 import { BasesMongodbModule } from "./bases-mongodb/bases-mongodb.module";
-import { CrudModule } from './crud/crud.module';
+import { CrudModule } from "./crud/crud.module";
 
 @Module({
   imports: [
@@ -29,7 +30,7 @@ import { CrudModule } from './crud/crud.module';
       type: "mongodb",
       url: process.env.MONGODB_URL,
       database: process.env.MONGODB_NAME,
-      entities: [Collection],
+      entities: [Collection, Food],
       synchronize: true,
     }),
     MonkeysModule,
