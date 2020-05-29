@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie um Registro</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+{{#if error}}
+<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+    <strong class="font-bold">Eita Preula!</strong>
+    <span class="block sm:inline">Preencha este formulário direito</span>
+    <span class="absolute top-0 bottom-0 right-0 px-4 py-3" onclick="this.parentNode.classList.add('hidden')">
+        <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20">
+            <title>Close</title>
+            <path
+                d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+        </svg>
+    </span>
+</div>
+{{/if}}
+
+<body>
+    <div class="mt-8 container mx-auto">
+        <h1 class="text-4xl mb-8">Nova Comida</h1>
+        <form class="w-full max-w-sm" method="POST">
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="name">
+                        Nome
+                    </label>
+                </div>
+                <div class="md:w-2/3">
+                    <input
+                        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                        id="name" name="name" type="text" placeholder="Digite o Nome da Comida">
+                </div>
+            </div>
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="ingredients">
+                        Ingredientes
+                    </label>
+                </div>
+                <div class="md:w-2/3">
+                    <textarea
+                        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                        name="ingredients" id="ingredients" cols="30" rows="10"
+                        placeholder="Digite os Ingredientes"></textarea>
+                </div>
+            </div>
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="emoji">
+                        Emoji
+                    </label>
+                </div>
+                <div class="md:w-2/3">
+                    <input
+                        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                        id="emoji" name="emoji" type="text" placeholder="Digite o Emoji" maxlength="2">
+                </div>
+            </div>
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="price">
+                        Preço
+                    </label>
+                </div>
+                <div class="md:w-2/3">
+                    <input
+                        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                        id="price" name="price" type="text" placeholder="Digite o Preço">
+                </div>
+            </div>
+            <div class="md:flex md:items-center">
+                <div class="md:w-1/3"></div>
+                <div class="md:w-2/3">
+                    <button
+                        class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                        type="submit">
+                        Adicionar Comida
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
