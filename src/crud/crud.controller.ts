@@ -43,10 +43,6 @@ export class CrudController {
     // Erro
     return res.redirect("/crud?error=1");
   }
-  @Get("update")
-  update(): string {
-    return `<h1>CRUD UPDATE Vai Aqui</h1>`;
-  }
   @Get("delete/:id")
   @Render("crud-delete")
   async delete(@Param("id") id: string) {
@@ -55,6 +51,32 @@ export class CrudController {
     if (!comida) throw new NotFoundException("Comida não encontrada!");
     // 2 - Retornar um Form de Confirmação / Cancelamento
     return { comida };
+  }
+  @Get("edit/:id")
+  @Render("crud-edit")
+  async edit(@Param("id") id: string) {
+    // 1 - Certificar-se de que a Comida foi encontrada
+    let comida = await this.crudService.findOne(id);
+    if (!comida) throw new NotFoundException("Comida não encontrada!");
+    // 2 - Retornar um Form de Edição
+    return { comida };
+  }
+  @Post("edit/:id")
+  async update(
+    @Param("id") id: string,
+    @Body() createFoodDto: CreateFoodDto,
+    @Res() res
+  ) {
+    // 1 - Certificar-se de que a Comida foi encontrada
+    let comida = await this.crudService.findOne(id);
+    if (!comida) throw new NotFoundException("Comida não encontrada!");
+    // 2 - Atualiza a comida
+    comida.name = createFoodDto.name;
+    comida.ingredients = createFoodDto.ingredients;
+    comida.emoji = createFoodDto.emoji;
+    comida.price = createFoodDto.price;
+    await this.crudService.save(comida);
+    return res.redirect("/crud?success=1");
   }
   @Post("delete/:id")
   async confirmDelete(@Param("id") id: string, @Res() res) {

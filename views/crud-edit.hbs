@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crie um Registro</title>
+    <title>Editar {{comida.name}}</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 {{#if error}}
@@ -24,7 +24,7 @@
 
 <body>
     <div class="mt-8 container mx-auto">
-        <h1 class="text-4xl mb-8">Nova Comida</h1>
+        <h1 class="text-4xl mb-8">Editar Comida {{comida.name}} {{comida.emoji}}</h1>
         <form class="w-full max-w-sm" method="POST">
             <div class="md:flex md:items-center mb-6">
                 <div class="md:w-1/3">
@@ -33,7 +33,7 @@
                     </label>
                 </div>
                 <div class="md:w-2/3">
-                    <input required
+                    <input required value="{{comida.name}}"
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                         id="name" name="name" type="text" placeholder="Digite o Nome da Comida">
                 </div>
@@ -48,7 +48,7 @@
                     <textarea required
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                         name="ingredients" id="ingredients" cols="30" rows="10"
-                        placeholder="Digite os Ingredientes"></textarea>
+                        placeholder="Digite os Ingredientes">{{comida.ingredients}}</textarea>
                 </div>
             </div>
             <div class="md:flex md:items-center mb-6">
@@ -58,7 +58,7 @@
                     </label>
                 </div>
                 <div class="md:w-2/3">
-                    <input required
+                    <input required value="{{comida.emoji}}"
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                         id="emoji" name="emoji" type="text" placeholder="Digite o Emoji" maxlength="2">
                 </div>
@@ -70,7 +70,7 @@
                     </label>
                 </div>
                 <div class="md:w-2/3">
-                    <input required
+                    <input required value="{{comida.price}}"
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                         id="price" name="price" type="text" placeholder="Digite o Preço">
                 </div>
@@ -81,7 +81,7 @@
                     <button
                         class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                         type="submit">
-                        Adicionar Comida
+                        Editar Comida
                     </button>
                 </div>
             </div>

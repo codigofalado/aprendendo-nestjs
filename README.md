@@ -25,7 +25,7 @@ Objetivos a cumprir com o Nest.JS:
 - [x] Configuração (variáveis de ambiente)
 - [x] Banco de Dados - Mongo
 - [x] Testes Unitários Para o MongoDB
-- [ ] Crud Básico
+- [x] Crud Básico
 - [ ] Cache
 - [ ] Autenticação
 - [ ] Upload de Arquivos
